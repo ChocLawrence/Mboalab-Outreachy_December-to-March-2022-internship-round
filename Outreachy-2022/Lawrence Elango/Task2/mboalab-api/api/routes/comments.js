@@ -12,7 +12,7 @@ const router = Router();
  * @access private
  * @type POST
  */
-router.get("/", userAuth, CommentsController.getAllComments);
+router.get("/", CommentsController.getAllComments);
 
 /**
  * @description Get Single Post
@@ -53,7 +53,7 @@ router.delete(
  * @type PUT
  */
 router.post(
-  "/comment-post/:id",
+  "/create-comment/:id",
   [userAuth, commentValidations],
   CommentsController.createComment
 );

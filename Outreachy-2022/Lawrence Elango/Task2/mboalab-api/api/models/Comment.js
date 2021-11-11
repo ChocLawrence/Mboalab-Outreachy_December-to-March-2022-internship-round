@@ -6,17 +6,27 @@ const CommentSchema = new Schema(
     post: {
       ref: "posts",
       type: Schema.Types.ObjectId,
-      default: null
+      default: null,
     },
     text: {
       type: String,
       required: true,
-      default: null
+      default: null,
+    },
+    names: {
+      type: String,
+      required: true,
+      default: null,
+    },
+    avatar: {
+      type: String,
+      required: true,
+      default: null,
     },
     user: {
       ref: "users",
       type: Schema.Types.ObjectId,
-      default: null
+      default: null,
     },
   },
   { timestamps: true }

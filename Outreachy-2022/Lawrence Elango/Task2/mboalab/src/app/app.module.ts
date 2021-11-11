@@ -25,7 +25,7 @@ declare module "@angular/core" {
 @NgModule({
   declarations: [
     AppComponent,
-    PreloaderComponent
+    PreloaderComponent,
   ],
   imports: [
     BrowserModule,

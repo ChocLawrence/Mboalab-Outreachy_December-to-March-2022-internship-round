@@ -13,10 +13,14 @@ import { AuthenticationService } from '../../../services/authentication.service'
 export class AccountVerificationComponent implements OnInit {
 
   public display: any;
-  public loading = false;
   public verification = false;
   public state: any;
   public verificationId: any;
+
+  public loadingData = false;
+  public loading = false;
+  public animationType = 'wanderingCubes';
+
 
   constructor(public core: CoreService,
     public router: Router,
@@ -45,19 +49,22 @@ export class AccountVerificationComponent implements OnInit {
 
   async verifyAccount(id: string) {
 
+    this.loadingData = true;
     this.loading = true;
 
     await this.authenticationservice
       .verifyAccount(id)
       .then(res => {
-        this.loading = false;
         this.verification = true;
         this.timer(2);
+        this.loading = false;
+        this.loadingData = false;
       })
       .catch(e => {
-        this.loading = false;
         this.verification = false;
         this.timer(1);
+        this.loading = false;
+        this.loadingData = false;
         this.core.handleError(e);
       });
 

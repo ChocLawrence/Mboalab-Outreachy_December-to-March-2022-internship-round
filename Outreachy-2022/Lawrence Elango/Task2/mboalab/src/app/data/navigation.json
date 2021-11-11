@@ -1,40 +1,40 @@
 [
-    {
-        "id": 1,
-        "linkText": "Home",
-        "link": "/",
-        "child": false
-    },
-    {
-        "id": 2,
-        "link": "/about",
-        "linkText": "About"
-    },
-    {
-        "id": 3,
-        "linkText": "Services",
-        "link": "/services"
-    },
-    {
-        "id": 4,
-        "linkText": "FAQs",
-        "link": "/faq"
-    },
-    {
-        "id": 5,
-        "linkText": "Blog",
-        "child": true,
-        "submenu": [
-            {
-                "id": 5.1,
-                "link": "/blog-grid",
-                "linkText": "Blog Grid"
-            }
-        ]
-    },
-    {
-        "id": 6,
-        "link": "/contact",
-        "linkText": "Contact"
-    }
+  {
+    "id": 1,
+    "linkText": "Home",
+    "link": "/",
+    "child": false
+  },
+  {
+    "id": 2,
+    "link": "/about",
+    "linkText": "About"
+  },
+  {
+    "id": 3,
+    "linkText": "Services",
+    "link": "/services"
+  },
+  {
+    "id": 4,
+    "linkText": "FAQs",
+    "link": "/faq"
+  },
+  {
+    "id": 5,
+    "linkText": "Blog",
+    "child": true,
+    "submenu": [
+      {
+        "id": 5.1,
+        "link": "/blog-grid",
+        "linkText": "Blog Grid"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "link": "/contact",
+    "linkText": "Contact"
+  }
 ]

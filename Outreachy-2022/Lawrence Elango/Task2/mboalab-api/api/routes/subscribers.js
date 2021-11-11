@@ -31,7 +31,7 @@ router.get("/:id", [validateAdmin], SubscribersController.getSingleSubscriber);
  */
 router.post(
   "/create-subscriber",
-  [userAuth, subscriberValidations, validator],
+  [subscriberValidations, validator],
   SubscribersController.createSubscriber
 );
 

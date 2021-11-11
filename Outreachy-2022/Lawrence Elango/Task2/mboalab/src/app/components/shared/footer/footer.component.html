@@ -49,16 +49,51 @@
       </div>
       <div class="col-lg-4 col-md-6 col-md-6">
         <div class="widget contact-widget">
-          <h4 class="widget-title">Working Hours</h4>
+          <h4 class="widget-title">Working Hours.</h4>
           <ul>
             <li>Monday - Friday: 7:00 - 17:00</li>
           </ul>
+          <div class="container">
+            <div class="form">
+              <form
+                [formGroup]="subscriberForm"
+                (ngSubmit)="onSubmitSubscriber()"
+              >
+                <div class="row">
+                  <label for="email">Subscribe to newsletter</label>
+                  <input
+                    type="email"
+                    formControlName="email"
+                    placeholder="Enter email"
+                  />
+                  <button
+                    name="login"
+                    [disabled]="!subscriberFormIsValid() || loading"
+                    id="login"
+                    type="submit"
+                    class="btn btn-primary btn-block login-btn mt-2 pointer"
+                  >
+                    Subscribe &nbsp;
+                    <div
+                      class="spinner-border float-right"
+                      role="status"
+                      *ngIf="loading"
+                    >
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <div class="footer-copyright">
       <p>
-        Copyright &copy; <a href="https://mboalab.africa.com" target="_blank">Mboalab</a> &nbsp;2021
+        Copyright &copy;
+        <a href="https://mboalab.africa.com" target="_blank">Mboalab</a>
+        &nbsp;2021
       </p>
     </div>
     <div [class]="shape">

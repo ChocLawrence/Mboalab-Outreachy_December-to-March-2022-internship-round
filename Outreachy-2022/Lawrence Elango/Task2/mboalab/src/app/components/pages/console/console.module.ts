@@ -27,10 +27,11 @@ import { ModalPostComponent } from './modal-post/modal-post.component';
 import { SettingsComponent } from './settings/settings.component';
 import { ProfileHeaderComponent } from './profile-header/profile-header.component';
 import { SubscribersComponent } from './subscribers/subscribers.component';
+import { ModalSubscriberComponent } from './modal-subscriber/modal-subscriber.component';
 
 
 @NgModule({
-  declarations: [ConsoleComponent, ProfileComponent, PostsComponent, CategoriesComponent, ModalCategoryComponent, ModalPostComponent, SettingsComponent, ProfileHeaderComponent, SubscribersComponent],
+  declarations: [ConsoleComponent, ProfileComponent, PostsComponent, CategoriesComponent, ModalCategoryComponent, ModalPostComponent, SettingsComponent, ProfileHeaderComponent, SubscribersComponent, ModalSubscriberComponent],
   imports: [
     CommonModule,
     ConsoleRoutingModule,

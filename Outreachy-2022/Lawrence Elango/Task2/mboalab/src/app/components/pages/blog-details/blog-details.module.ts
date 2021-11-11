@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 
+import { FormsModule } from "@angular/forms";
+import { ReactiveFormsModule } from "@angular/forms";
 import { BlogDetailsRoutingModule } from './blog-details-routing.module';
 import { BlogDetailsComponent } from './blog-details.component';
 import { SharedModule } from '../../shared/shared.module';
@@ -25,6 +27,8 @@ import { ContentComponent } from './content/content.component';
       tertiaryColour: '#ffffff',
       fullScreenBackdrop: true
     }),
+    FormsModule,
+    ReactiveFormsModule,
     NgbModule,
     HttpClientModule
   ]

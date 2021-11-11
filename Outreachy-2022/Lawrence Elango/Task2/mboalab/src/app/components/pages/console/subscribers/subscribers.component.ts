@@ -24,7 +24,7 @@ export class SubscribersComponent implements OnInit {
   public subscriberImagePreview: any;
   public subscriberImageDefault = 'assets/img/contact-thumb.jpg';
 
-  public thesubscriber: any;
+  public theSubscriber: any;
   public origin = 'subscribers';
   public subscriberModalAction = '';
 
@@ -61,13 +61,13 @@ export class SubscribersComponent implements OnInit {
 
   openSubscriberModal(action: string, subscriber: any) {
     this.subscriberModalAction = action;
-    this.thesubscriber = subscriber;
+    this.theSubscriber = subscriber;
     this.subscriberModal.openModal();
   }
 
   onSubscriberModalClosed() {
     this.subscriberModalAction = '';
-    this.thesubscriber = null;
+    this.theSubscriber = null;
     this.getSubscribers();
   }
 

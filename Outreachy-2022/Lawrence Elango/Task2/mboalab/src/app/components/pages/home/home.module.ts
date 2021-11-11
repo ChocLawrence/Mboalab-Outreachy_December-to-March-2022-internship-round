@@ -5,6 +5,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { NgwWowModule } from 'ngx-wow';
 
+import { NgxLoadingModule, ngxLoadingAnimationTypes } from "ngx-loading";
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { SharedModule } from '../../shared/shared.module';
@@ -28,6 +29,15 @@ import { FormsModule } from '@angular/forms';
     HomeRoutingModule,
     SharedModule,
     NgbModule,
+    NgxLoadingModule.forRoot({
+      animationType: ngxLoadingAnimationTypes.wanderingCubes,
+      backdropBackgroundColour: 'rgba(0,0,0,0.4)',
+      backdropBorderRadius: '4px',
+      primaryColour: '#ffffff',
+      secondaryColour: '#ffffff',
+      tertiaryColour: '#ffffff',
+      fullScreenBackdrop: true
+    }),
     SlickCarouselModule,
     NgCircleProgressModule.forRoot(),
     NgwWowModule,

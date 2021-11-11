@@ -1,4 +1,8 @@
 import { Subscriber } from "../models";
+import { ejs, path } from "../config";
+import { API_DOMAIN, DOMAIN } from "../constants";
+import sendMail from "../functions/email-sender";
+import createNotification from "../functions/notification";
 import { ErrorHandler, SuccessHandler } from "../functions/response-handler";
 
 exports.getAllSubscribers = async (req, res, next) => {
@@ -11,6 +15,8 @@ exports.getAllSubscribers = async (req, res, next) => {
           subscribers: docs.map((doc) => {
             return {
               email: doc.email,
+              createdat: doc.createdAt,
+              updatedat: doc.updatedAt,
               _id: doc._id,
             };
           }),
@@ -73,6 +79,31 @@ exports.createSubscriber = async (req, res, next) => {
     await subscriber.save();
 
     //send email to subscriber
+
+    const emailTemplate = await ejs.renderFile(
+      path.join(__dirname, "../templates/emailTemplate.ejs"),
+      {
+        user: "Mboalab enthusiast",
+        email: `${email}`,
+        title: "Successfully subscribed to Newsletter | MboaLab",
+        imageUrl:
+          "https://drive.google.com/uc?id=1RvaW5sOIMiSMaoaI6J-EnibfT7AwRaGj",
+        mode: "main",
+        imageText: "Newsletter | Mboalab",
+        stageOneText:
+          "You have successfully subscribed to our newsletter concerning the Data Science Project. We will keep you up to date with all necessary information henceforth.",
+        stageOneButtonText: "Go to Site",
+        stageTwoText:
+          "If you didn't perform this action, kindly reach out to us to revert this. Keep using Mboalab",
+        url: `${DOMAIN}`,
+      }
+    );
+
+    await sendMail(
+      email,
+      "Subscribed to Newsletter on MboaLab",
+      emailTemplate
+    );
 
     //end send mail
 

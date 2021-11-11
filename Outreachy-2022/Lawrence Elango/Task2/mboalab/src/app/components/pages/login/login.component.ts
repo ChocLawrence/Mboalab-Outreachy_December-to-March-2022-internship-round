@@ -72,7 +72,11 @@ export class LoginComponent implements OnInit {
 
   redirectToDashboard(destination: string) {
     let timer = setTimeout(() => {
-      window.location.href = "/mboalab"+ destination;
+      if (location.href.includes("localhost")) {
+        window.location.href = "http://localhost:4200" + destination;
+      } else {
+        window.location.href = "/mboalab" + destination;
+      }
       clearTimeout(timer);
     }, 2000);
   }

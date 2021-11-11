@@ -15,7 +15,7 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-export class SubscribersService {
+export class CommentsService {
 
   public apiUrl: string;
   public httpOptions;
@@ -26,50 +26,68 @@ export class SubscribersService {
     public core: CoreService
   ) {
 
-    this.apiUrl = `${this.urlService.apiUrl}` + 'subscribers/';
+    this.apiUrl = `${this.urlService.apiUrl}` + 'comments/';
     this.httpOptions = this.core.httpOptions;
   }
 
-
-  getSubscribers(
+  getComments(dataObject: any
   ): Promise<any> {
-    let url = this.apiUrl;
+    let url = this.apiUrl + '?';
+
+    if (!this.core.isEmptyOrNull(dataObject.post)) {
+      url += `&post=${encodeURIComponent(dataObject.post)}`
+    }
+
     return this.core.makeRemoteRequest(url, "get", null, httpOptions);
   }
 
 
   /** PUT: update a currenciess basic data  */
-  addSubscriber(dataObject: any): Promise<any> {
-    let url = this.apiUrl + 'create-subscriber';
+  addComment(dataObject: any, id: any): Promise<any> {
+    let url = this.apiUrl + 'create-comment/' + id;
 
     let params = new FormData();
 
-    // These parameters are always passed
-    if (!this.core.isEmptyOrNull(dataObject.email)) {
-      params.append("email", dataObject.email);
+    if (!this.core.isEmptyOrNull(dataObject.text)) {
+      params.append("text", dataObject.text);
     }
 
     return this.core.makeRemoteRequest(url, "post", params, this.httpOptions);
   }
 
 
-
-
-  getSingleSubscriber(id: any
+  getSingleComment(id: any
   ): Promise<any> {
-    let url = this.apiUrl + id;
+    let url = this.apiUrl + '' + id;
 
     return this.core.makeRemoteRequest(url, "get", null, httpOptions);
   }
 
 
+
+  /** PUT: update a currenciess basic data  */
+  updateComment(dataObject: any, id: any): Promise<any> {
+    let url = this.apiUrl + 'update-comment/' + id;
+
+    let params = new FormData();
+
+    // These parameters are always passed
+    if (!this.core.isEmptyOrNull(dataObject.title)) {
+      params.append("text", dataObject.title);
+    }
+
+
+    return this.core.makeRemoteRequest(url, "put", params, null);
+  }
+
+
   /** DELETE: delete a currencies  */
-  deleteSubscriber(id: any): Promise<any> {
+  deleteComment(id: any): Promise<any> {
     let url = '';
 
     // let params = new HttpParams({ encoder: new CustomHttpParamEncoder() });
     if (!this.core.isEmptyOrNull(id)) {
-      url = this.apiUrl + 'delete-subscriber/' + id;
+      url = this.apiUrl + 'delete-comment/' + id;
     }
 
     return this.core.makeRemoteRequest(url, "delete", null, this.httpOptions);
