@@ -2,9 +2,9 @@
 
 Dear contributors, thanks a lot for your interest and staying with us regardless of the internship membership.
 
-To participate, please read the `Technical Documentation` we provided carefully.
+To participate, please read the [Technical Documentation](https://docs.google.com/document/d/1QKyoeZo2AHd_wQE5I-muEdu2Li9EpYFdMIVB1OwI0cU/edit?usp=drivesdk) we provided carefully.
 
-The aim of this challenge is to choose best design ideas for [mboalab.africa](mboalab.africa) website.
+The aim of this challenge is to choose best design ideas for [mboalab.africa](www.mboalab.africa) website.
 This challenge is purely dedicated on *design* stage.
 If you want to contribute in development phase, please stay tuned for more updates.
 
