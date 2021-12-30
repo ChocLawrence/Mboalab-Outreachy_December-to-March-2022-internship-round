@@ -1,6 +1,4 @@
-# Mboalab-Outreachy_December-to-March-2022-internship-round
-### About me
-Happy to be here and working on this pproject. Have been a victim of typhoid before and know how frustrating it is when you doubt the diagnosis given because each time you do the test its almost always positive. Its exciting to be able to contribute to a health problem faced by many in my community. Can't wait to begin.
+# Mboalab | Challenge based contribution
 
 ## General information about the Project:
 
@@ -11,11 +9,11 @@ Both applicants with previous experience in open-source contributions and comple
 
 ## How to contribute to the project?
 Applicants can contribute to this project through the [project repository](https://github.com/Mboalab/Mboalab-Outreachy_December-to-March-2022-internship-round) on GitHub. 
-- Check the [Contributions Guidelines](https://github.com/Mboalab/Mboalab-Outreachy_December-to-March-2022-internship-round/blob/main/Project%E2%80%99s%20Contribution%20Information/Guidelines%20on%20how%20to%20contribute.md) to find useful instructions on how to select a task and start contributing to the project.
-- Check the [List of all project's tasks](https://github.com/Mboalab/Mboalab-Outreachy_December-to-March-2022-internship-round/blob/main/Starter%20Tasks/List%20of%20all%20project's%20Tasks.md) to see all available tasks for this project. 
+Check the Contributions Guidelines and the list of details via [Technical Documentation](https://docs.google.com/document/d/1QKyoeZo2AHd_wQE5I-muEdu2Li9EpYFdMIVB1OwI0cU/edit?usp=sharing)
 
-
-## Mentor attribution: 
+## Mentor attribution
 Each project’s Starter Task is supervised by a specific mentor. Applicants desiring to contribute to a specific task should get in touch with the assigned mentor. 
 Information about the assigned mentor can be found in the task’s descriptions.
-Information about Mboalab community Mentors can be found [Here](https://github.com/Mboalab/Mboalab-Outreachy_December-to-March-2022-internship-round/blob/main/Meet%20the%20Mentors/Mboalab%20Community%20Mentors.md). See [Meet the Mentors Folder.](https://github.com/Mboalab/Mboalab-Outreachy_December-to-March-2022-internship-round/tree/main/Meet%20the%20Mentors)
+Information about Mboalab community Mentors can be found [Here](https://github.com/Mboalab/Mboalab-Outreachy_December-to-March-2022-internship-round/blob/main/Meet%20the%20Mentors/Mboalab%20Community%20Mentors.md).
+See [Meet the Mentors Folder.](https://github.com/Mboalab/Mboalab-Outreachy_December-to-March-2022-internship-round/tree/main/Meet%20the%20Mentors)
+Feel free to reach out `@Bido` and `@Nodira` for more guidance and details.
