@@ -86,6 +86,8 @@
     c) Tools, Programming Languages, Frameworks
     d) Timeline for implementation
 
+    >> The document is located in the folder Lawrence_Elango/Proposal Document/
+
 
 ---------------
 
